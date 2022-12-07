@@ -1,0 +1,23 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "description": "Modify existing starter code to create a command line application that will ask some questions, take user input, and create/format a readme.md document",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DylanCas/readme-genny.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/DylanCas/readme-genny/issues"
+  },
+  "homepage": "https://github.com/DylanCas/readme-genny#readme"
+}
