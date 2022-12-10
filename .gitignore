@@ -1,4 +1,4 @@
-node_modules
-package-lock.json
+# leave node_modules in
+node_modules 
 .vscode
 .DS_Store

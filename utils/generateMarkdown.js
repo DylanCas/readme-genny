@@ -12,7 +12,12 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.name}
+
+// TODO: Format Readme file in style similar to below, per user story
+
+  Install Instructions: 
+   ${data.installInstruct}
 
 `;
 }
