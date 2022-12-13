@@ -35,23 +35,18 @@ const questions = [
         type: 'input',
         message: 'What command should be ran to install dependencies?',
         default: 'npm i',
-        name: 'installInstruct',
+        name: 'installCommand',
     },
     {
         type: 'input',
         message: 'What are testing instructions?',
-        name: 'test',
+        name: 'testCommand',
         default: 'npm test',
     },
     {
         type: 'input',
-        message: 'Please provide a table of contents;',
-        name: 'contents',
-    },
-    {
-        type: 'input',
         message: 'How is the app used?',
-        name: 'Usage',
+        name: 'usage',
     },
     {
         type: 'input',
