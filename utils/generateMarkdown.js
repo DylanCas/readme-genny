@@ -12,8 +12,7 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.name}
-// TODO: Format Readme file in style similar to below, per user story
+  return `
   ## ${data.name}
 
   ## Description
@@ -22,15 +21,15 @@ function generateMarkdown(data) {
 
   ## Table of  Contents
 
-  * [installation command]
-  * [usage]
-  * [test command]
-  * [contribution]
-  * [question]
+  * [Installation Command](#installCommand)
+  * [Usage](#usage)
+  * [Test Command](#testCommand)
+  * [Contribution](#constribution)
+  * [Questions](#question)
 
   ## Installation Command: 
   
-  ${data.installInstruct}
+  ${data.installCommand}
 
   ## Usage 
 
@@ -46,7 +45,7 @@ function generateMarkdown(data) {
 
   ## Question
 
-  If  you have any questions about this app, you can open issue or reach me at ${data.email}
+  If  you have any questions about this app, you can open an issue in the repo or reach me directly at ${data.email}
   And see more of my work at (https://github.com/${data.github})
 `;
 }
