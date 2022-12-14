@@ -57,13 +57,13 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
+// function to write README file
 function writeToFile(fileName, data) {
     // fs.writeFileSync(path.resolve(__dirname, 'dist', fileName), data)
     fs.writeFileSync(path.join(process.cwd(), 'dist', fileName), data)
 }
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
     inquirer.prompt(questions).then((userAnswers) => {
         // console.log(generateMarkdown(userAnswers))

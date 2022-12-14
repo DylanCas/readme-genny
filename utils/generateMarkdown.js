@@ -1,53 +1,75 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  switch (license) {
+    case 'MIT':
+      return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
+      break;
+    case 'APACHE 2.0':
+      return '![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)';
+      break;
+    case 'GPL 3.0':
+      return '![GitHub license](https://img.shields.io/badge/license-GPL3.0-blue.svg)';
+      break;
+    case 'BSD 3':
+      return '![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)';
+      break;
+    default:
+      return '';
+  }
+}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license !== 'None') {
+    return `\n* [License](#license)`;
+  }
+  return '';
+}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license !== 'None') {
+    return `\n## License
+    \nThis project is licensed under the ${license} license.`;
+  }
+  return '';
+}
 
-// TODO: Create a function to generate markdown for README
+// function to generate markdown for README
 function generateMarkdown(data) {
-  return `
-  ## ${data.name}
+  return `## ${data.name}
 
-  ## Description
+  ${renderLicenseBadge(data.license)}
 
-  ${data.description}
+## Description
 
-  ## Table of  Contents
+${data.description}
 
-  * [Installation Command](#installCommand)
-  * [Usage](#usage)
-  * [Test Command](#testCommand)
-  * [Contribution](#constribution)
-  * [Questions](#question)
+## Table of  Contents
 
-  ## Installation Command: 
+* [Installation Command](#installCommand)
+* [Usage](#usage)${renderLicenseLink(data.license)}
+* [Test Command](#testCommand)
+* [Contribution](#constribution)
+* [Questions](#question)
+
+## Installation Command: 
   
-  ${data.installCommand}
+${data.installCommand}
 
-  ## Usage 
+## Usage 
 
-  ${data.usage}
+${data.usage}${renderLicenseSection(data.license)}
 
-  ## Test Command
+## Test Command
 
-  ${data.testCommand}
+${data.testCommand}
 
-  ## Contribution
+## Contribution
 
-  ${data.contribution}
+${data.contribution}
 
-  ## Question
+## Question
 
-  If  you have any questions about this app, you can open an issue in the repo or reach me directly at ${data.email}
-  And see more of my work at (https://github.com/${data.github})
-`;
+If  you have any questions about this app, you can open an issue in the repo or reach me directly at ${data.email}
+And see more of my work at (https://github.com/${data.github})`;
 }
 
 module.exports = generateMarkdown;
