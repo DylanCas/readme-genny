@@ -4,7 +4,7 @@
 
 ## Description
 
-Taking user input via 'Inquirer', that data is used to create a formatted readme
+Using node.js and Inquirer, takes user input and creates a new readme.md file
 
 ## Table of  Contents
 
@@ -21,7 +21,7 @@ npm i
 
 ## Usage 
 
-Launch with node index, then as you go through the prompts type your answer or select the best option. At the end, a readme.md document will be created.
+launch with npm index, follow the prompts and select the options that seem best suited for your project, then a new readme.md file will be created
 ## License
     
 This project is licensed under the MIT license.
@@ -32,7 +32,7 @@ npm test
 
 ## Contribution
 
-Create an issue on the repo or create a fork and then pull request
+make a fork and then a pull request or open an issue in the repo
 
 ## Question
 
